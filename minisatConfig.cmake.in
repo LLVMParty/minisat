@@ -8,6 +8,9 @@
 get_filename_component(MINISAT_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 set(MINISAT_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
 
+find_dependency(ZLIB)
+find_dependency(Threads)
+
 # Our library dependencies (contains definitions for IMPORTED targets)
 include("${MINISAT_CMAKE_DIR}/@MINISAT_TARGETS_FILENAME@")
 
